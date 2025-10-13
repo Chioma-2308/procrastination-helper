@@ -106,8 +106,8 @@ const ProcrastinationHelper = () => {
         }
       }
       setCurrentQuote(quotes[Math.floor(Math.random() * quotes.length)]);
-    }
-  }, []); // Empty dependency array - runs only once
+    } // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Save data to localStorage - with proper dependencies
   useEffect(() => {
@@ -601,7 +601,7 @@ const ProcrastinationHelper = () => {
           <div className={`rounded-2xl shadow-lg p-4 mb-6 text-center ${
             darkMode ? 'bg-gray-800 text-gray-300' : 'bg-white text-gray-600'
           }`}>
-            <p className="italic">"{currentQuote}"</p>
+            <p className="italic">{currentQuote}</p>
           </div>
         )}
 
